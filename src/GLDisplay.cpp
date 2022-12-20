@@ -13,6 +13,7 @@ GLDisplay::~GLDisplay()
 
 void GLDisplay::InitVars()
 {
+    m_video_file = "video.avi";
     quitSignal = false;
     m_screen_width = -1;
     m_screen_height = -1;
@@ -35,6 +36,8 @@ void GLDisplay::InitVars()
     _mouse_x = 0;
     _mouse_y = 0;
     // END : Pan/Zoom
+    m_video_frame = 0;
+    m_record_length = 7500;
 }
 
 // UPDATE : Pan/Zoom
@@ -110,11 +113,43 @@ void GLDisplay::Render()
 {
 }
 
+void GLDisplay::SaveBuffer() {
+    if (m_video_frame == -1) return;
+    if (m_video_frame == 0) {
+        writer.set(cv::VIDEOWRITER_PROP_QUALITY, 100.0);
+        // writer.open(m_video_file.c_str(), cv::VideoWriter::fourcc('X','2','6','4'), 25.0f, cv::Size(m_screen_width, m_screen_height), true);
+        writer.open(m_video_file.c_str(), cv::VideoWriter::fourcc('M','P','4','V'), 25.0f, cv::Size(m_screen_width, m_screen_height), true);
+        m_video_frame++;
+    }
+    else if(m_video_frame < m_record_length) {
+        cv::Mat pixels( m_screen_height, m_screen_width, CV_8UC3 );
+        glReadPixels(0, 0, m_screen_width, m_screen_height, GL_RGB, GL_UNSIGNED_BYTE, pixels.data);
+        cv::Mat cv_pixels( m_screen_height, m_screen_width, CV_8UC3 );
+        #pragma omp parallel for
+        for (int y=0; y<m_screen_height; y++) for (int x=0; x<m_screen_width; x++) {
+            cv_pixels.at<cv::Vec3b>(y,x)[2] = pixels.at<cv::Vec3b>(m_screen_height-y-1,x)[0];
+            cv_pixels.at<cv::Vec3b>(y,x)[1] = pixels.at<cv::Vec3b>(m_screen_height-y-1,x)[1];
+            cv_pixels.at<cv::Vec3b>(y,x)[0] = pixels.at<cv::Vec3b>(m_screen_height-y-1,x)[2];
+        }
+        writer << cv_pixels;
+        m_video_frame++;
+        printf("%d/%d\n", m_video_frame, m_record_length);
+    }
+    else if(m_video_frame == m_record_length) {
+        writer.release();
+        printf("Video is ready!\n");
+        m_video_frame = -1;
+        ::exit(0);
+    }
+}
+
 void GLDisplay::Update()
 {
     PreRender();
     Render();
     PostRender();
+
+    SaveBuffer();
 }
 
 void GLDisplay::GL_Init()
@@ -300,7 +335,7 @@ void GLDisplay::ProcessKeys( SDL_Event &event )
 {
     bool shiftState;
     bool ctrlState;
-    SDLMod modifier = SDL_GetModState(); 
+    SDLMod modifier = SDL_GetModState();
     m_keyCode = (int) event.key.keysym.sym;
 
     shiftState = ( (modifier & (KMOD_LSHIFT|KMOD_RSHIFT)) != 0);
@@ -322,7 +357,7 @@ void GLDisplay::SetBGAlpha( float alpha )
 void GLDisplay::GetRealCoordinates( float& x, float& y )
 {
     x =  (_mouse_x * (vpRight - vpLeft) / m_screen->w) + vpLeft;
-    y = (_mouse_y * (vpBottom - vpTop) / m_screen->h ) + vpTop; 
+    y = (_mouse_y * (vpBottom - vpTop) / m_screen->h ) + vpTop;
     y = -1.0 * y;
 }
 
@@ -335,4 +370,3 @@ float GLDisplay::PickDistance()
 {
     return _pick_distance;
 }
-

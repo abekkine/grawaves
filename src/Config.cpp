@@ -33,7 +33,6 @@ void Config::Defaults()
     body_color = 0xffffff;
     body_random_speed = 2.0;
     // Wave
-    wave_spawnperiod = 0.5;
     wave_speed = 1.0;
     wave_lifetime = 100.0;
     wave_display = true;
@@ -86,7 +85,6 @@ void Config::Read( const char *filename )
         setting_cfg = config_lookup( &config, "gwaves.wave" );
         if( setting_cfg != NULL )
         {
-            config_setting_lookup_float( setting_cfg, "spawnperiod", &wave_spawnperiod );
             config_setting_lookup_float( setting_cfg, "speed", &wave_speed );
             config_setting_lookup_float( setting_cfg, "lifetime", &wave_lifetime );
             config_setting_lookup_int( setting_cfg, "display", &wave_display );

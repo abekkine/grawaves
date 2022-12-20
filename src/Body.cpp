@@ -77,7 +77,7 @@ void Body::AtRandom( Scalar radius )
 void Body::SetSpeedLimit( bool limit_enable, Scalar limit_value )
 {
     fLimitEnable = limit_enable;
-    speedLimit = limit_value;
+    speedLimit = limit_value * 0.25;
 }
 
 void Body::Select( bool value )

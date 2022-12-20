@@ -3,13 +3,14 @@
 
 #include <SDL/SDL.h>
 #include <GL/gl.h>
+#include <opencv2/opencv.hpp>
 
 class GLDisplay {
 
     public:
         GLDisplay();
         ~GLDisplay();
-        
+
         void SetScreenSize( int width, int height );
         // UPDATE : Pan/Zoom
         void SetWorldSize( double size );
@@ -26,6 +27,7 @@ class GLDisplay {
         void SetBGAlpha( float alpha );
         void SetPickRange( int range );
         float PickDistance();
+        void SaveBuffer();
 
     public:
         static void ExitFunction();
@@ -37,6 +39,11 @@ class GLDisplay {
         void GetRealCoordinates( float& x, float& y );
 
     private:
+        std::string m_video_file;
+        int m_video_frame;
+        int m_record_length;
+        cv::VideoWriter writer;
+
         // UPDATE : Pan/Zoom
         double _real_width;
         double _real_height;
@@ -82,4 +89,3 @@ class GLDisplay {
 
 
 #endif
-

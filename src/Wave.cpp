@@ -5,7 +5,6 @@
 Scalar Wave::WAVE_LIFETIME = 1.0;
 Scalar Wave::WAVE_SPEED = 1.0;
 Scalar Wave::WAVE_ALPHAFACTOR = 1.0;
-Scalar Wave::WAVE_SPAWN_PERIOD = 0.5;
 unsigned int Wave::WAVE_DEFAULTCOLOR = 0x204080;
 
 Wave::Wave():

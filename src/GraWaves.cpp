@@ -54,7 +54,6 @@ void GraWaves::Initialize()
     Entity::RANDOM_SPEED = config->body_random_speed;
     Wave::WAVE_LIFETIME = config->wave_lifetime;
     Wave::WAVE_SPEED = config->wave_speed;
-    Wave::WAVE_SPAWN_PERIOD = config->wave_spawnperiod;
     Wave::WAVE_DEFAULTCOLOR = config->wave_color;
     Wave::WAVE_ALPHAFACTOR = config->wave_alphafactor;
 

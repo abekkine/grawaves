@@ -23,12 +23,14 @@ clean_files.append( VERSION_INC )
 env.Clean( 'default', clean_files )
 
 env.ParseConfig( 'sdl-config --cflags --libs' )
+env.ParseConfig( 'pkg-config --libs opencv' )
 #env.Append( CPPFLAGS = [ '-p' ] )
 #env.Append( LINKFLAGS = [ '-p' ] )
 env.Append( CPPFLAGS = [ '-g' ] )
 env.Append( CPPFLAGS = [ '-Wall' ] )
 env.Append( CPPFLAGS = [ '-Wextra' ] )
 env.Append( LINKFLAGS = [ '-g' ] )
+env.Append( LINKFLAGS = [ '-L/usr/local/share/OpenCV/3rdparty/lib'] )
 env.Append( CPPPATH = [ 'inc' ] )
 env.Append( LIBS = [ 'GL' ] )
 env.Append( LIBS = [ 'config' ] )
@@ -37,4 +39,3 @@ files = Glob( 'src/*.cpp' )
 
 target_path = 'bin/%s' % TARGET_NAME
 env.Program( target = target_path, source = files )
-

@@ -9,5 +9,5 @@ doc/doxygen/
 bin/grawvs
 version.h
 *.conf
-
+*.avi
 
