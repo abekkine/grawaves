@@ -33,7 +33,6 @@ public:
     int body_color;
     double body_random_speed;
     // Wave
-    double wave_spawnperiod;
     double wave_speed;
     double wave_lifetime;
     int wave_display;

@@ -4,7 +4,7 @@ gwaves =
     general = 
     {
         frequency = 0;
-        timestep = 0.5;
+        timestep = 0.2;
     };
 
     // Display configuration.
@@ -13,12 +13,12 @@ gwaves =
         // Screen dimensions.
         screen = 
         {
-            width = 500;
-            height = 500;
+            width = 2000;
+            height = 2000;
         };
 
         // object picking maximum range in pixels.
-        pickrange = 5;
+        pickrange = 8;
 
         // Background color. 
         // Color format, in hex; 
@@ -30,40 +30,41 @@ gwaves =
     body =
     {
         // default mass.
-        mass = 500.0;
+        mass = 5000.0;
         display = 1;
         //      0xRRGGBB
         color = 0xffffff;
         // limit value for initial random speed.
-        randomspeed = 5.0;
+        randomspeed = 3.0;
     };
 
     // Wave configuration.
     wave = 
     {
-        speed = 40.0;
-        lifetime = 10.0;
+        spawnperiod = 2.5;
+        speed = 20.0;
+        lifetime = 25.0;
         display = 1;
         //      0xRRGGBB
-        color = 0x0080ff;
-        alphafactor = 0.8;
+        color = 0x8080ff;
+        alphafactor = 0.02;
     };
 
     // Universe configuration.
     universe =
     {
-        radius = 1000.0;
-        gravity_con = 1.0;
-        num_bodies = 10;
-        deadzone = 100.0;
-        // When set true, bodies cannot exceed wave speed.
+        radius = 2000.0;
+        gravity_con = 2.0;
+        num_bodies = 250;
+        deadzone = 10.0;
+       // When set true, bodies cannot exceed wave speed.
         speedlimit = true;
     };
 
     // Debugging configuration flags.    
     debug =
     {
-        mode = true;
+        mode = false;
     };
 };
 
