@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?taskcoach release="1.2.25" tskversion="33"?>
+
+<tasks>
+<task completiondate="2011-08-08 19:15:23.581405" id="49697168:1311921648.55" percentageComplete="100" startdate="2011-07-29 09:40:00" status="1" subject="Importing available tasks into new taskfile." />
+<task completiondate="2011-08-09 13:08:26.752445" id="4a958c78-ba74-11e0-a843-485d6095e6ad" percentageComplete="100" startdate="2011-07-30 09:22:00" status="1" subject="Mouse pan and zoom should be implemented." />
+<task completiondate="2011-08-08 20:43:56.939332" id="c00089e0-c12c-11e0-833d-00241d8444a1" percentageComplete="100" startdate="2011-08-07 22:37:00" status="1" subject="Bodies should not pass the speed of waves.">
+<description>
+1) Under a certain distance, bodies should unite.
+2) Near and above wave speed, bodies should combine.
+</description>
+<effort id="f40b4fec-c1de-11e0-ae3a-0024811f5dee" start="2011-08-08 19:53:34" status="1" stop="2011-08-08 20:43:52" />
+</task>
+<task completiondate="2011-08-08 19:36:01.851558" id="7fcc9fee-ba74-11e0-a843-485d6095e6ad" percentageComplete="100" startdate="2011-07-30 09:23:00" status="1" subject="Initial random speed vectors could be set.">
+<effort id="a77b2364-c1d9-11e0-89dd-0024811f5dee" start="2011-08-08 19:15:38" status="1" stop="2011-08-08 19:35:48" />
+</task>
+<task completiondate="2011-08-08 19:53:17.117002" id="021e848a-c1b4-11e0-9b75-0024811f5dee" percentageComplete="100" startdate="2011-08-08 14:46:00" status="1" subject="Initial velocity assignment.">
+<description>
+Initial velocities should be assigned in a regular procedure. Debug statements should be removed.
+</description>
+</task>
+<task id="d7886042-ba74-11e0-a843-485d6095e6ad" startdate="2011-07-30 09:26:00" status="1" subject="Closed space should be implemented." />
+<task completiondate="2011-08-09 13:27:11.096920" id="58125f08-c1a8-11e0-87b4-0024811f5dee" percentageComplete="100" reminder="None" startdate="2011-08-08 13:22:00" status="1" subject="Individual coloring for waves should be possible." />
+<task id="56ee76c2-c1e7-11e0-a4bb-0024811f5dee" startdate="2011-08-08 20:53:00" status="1" subject="Simulation display should be relatively orientable.">
+<description>
+1) Simulation display viewport should be able to track one (or some) of the entities.
+
+2) This behaviour should be configurable during runtime.
+
+3) Entities requested to be tracked should be preferably selectable from screen by using mouse cursor. Alternatively, some keyboard navigation would be acceptable for the beginning.
+</description>
+</task>
+<task completiondate="2011-08-09 10:42:59.274245" id="2d9fc808-c1b4-11e0-9b75-0024811f5dee" percentageComplete="100" startdate="2011-08-08 14:47:00" status="1" subject="Color conversion is redefined in Wave class.">
+<description>
+Reuse of existing routines should be maximized. If necessary, a utility sub class would be used from both GLDisplay and Wave classes.
+</description>
+</task>
+<task completiondate="2011-08-09 10:21:22.088285" id="3afca56c-ba74-11e0-a843-485d6095e6ad" percentageComplete="100" startdate="2011-07-30 09:21:00" status="1" subject="Reset simulation option should be implemented.">
+<effort id="3fd1d796-c245-11e0-8180-d754038c7241" start="2011-08-09 08:05:50" status="1" stop="2011-08-09 09:37:31" />
+</task>
+<task completiondate="2011-07-29 09:40:47.377466" id="45182352:1311921628.52" percentageComplete="100" startdate="2011-07-29 09:40:00" status="1" subject="Creation of new taskfile." />
+<task completiondate="2011-08-08 19:15:16.295673" id="43733e5a-c1a8-11e0-87b4-0024811f5dee" percentageComplete="100" startdate="2011-08-08 13:22:00" status="1" subject="A freeze/pause function should be implemented.">
+<description>
+SPACE key should pause/resume the simulation.
+</description>
+</task>
+<task completiondate="2011-08-08 19:49:56.573817" id="1ec4517c-c1dd-11e0-8b99-0024811f5dee" percentageComplete="100" startdate="2011-08-08 19:40:00" status="1" subject="Configuration file should include a new section for debugging actions.">
+<description>
+As a beginning, Mode debugging should tied to such a control.
+</description>
+<effort id="3fbbd67a-c1dd-11e0-8b99-0024811f5dee" start="2011-08-08 19:41:22" status="1" stop="2011-08-08 19:49:54" />
+</task>
+<syncmlconfig>
+<TaskCoach-00000131749f0c41ef31c1ac007f000000010001>
+<spds>
+<sources>
+<TaskCoach-00000131749f0c41ef31c1ac007f000000010001.Tasks />
+<TaskCoach-00000131749f0c41ef31c1ac007f000000010001.Notes />
+</sources>
+<syncml>
+<Auth />
+<Conn />
+</syncml>
+</spds>
+</TaskCoach-00000131749f0c41ef31c1ac007f000000010001>
+</syncmlconfig>
+<guid>
+00000131749f0c41ef31c1ac007f000000010001
+</guid>
+</tasks>

@@ -1,0 +1,69 @@
+gwaves = 
+{
+    // General settings.
+    general = 
+    {
+        frequency = 0;
+        timestep = 0.5;
+    };
+
+    // Display configuration.
+    display = 
+    {
+        // Screen dimensions.
+        screen = 
+        {
+            width = 500;
+            height = 500;
+        };
+
+        // object picking maximum range in pixels.
+        pickrange = 5;
+
+        // Background color. 
+        // Color format, in hex; 
+        //        0xRRGGBB
+        bgcolor = 0x000000;
+    };
+
+    // Body configuration.
+    body =
+    {
+        // default mass.
+        mass = 500.0;
+        display = 1;
+        //      0xRRGGBB
+        color = 0xffffff;
+        // limit value for initial random speed.
+        randomspeed = 5.0;
+    };
+
+    // Wave configuration.
+    wave = 
+    {
+        speed = 40.0;
+        lifetime = 10.0;
+        display = 1;
+        //      0xRRGGBB
+        color = 0x0080ff;
+        alphafactor = 0.8;
+    };
+
+    // Universe configuration.
+    universe =
+    {
+        radius = 1000.0;
+        gravity_con = 1.0;
+        num_bodies = 10;
+        deadzone = 100.0;
+        // When set true, bodies cannot exceed wave speed.
+        speedlimit = true;
+    };
+
+    // Debugging configuration flags.    
+    debug =
+    {
+        mode = true;
+    };
+};
+

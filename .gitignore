@@ -1,0 +1,13 @@
+.hg/
+doc/doxygen/
+.hgignore
+.sconsign.dblite
+.*sw*
+*.orig
+*.o
+*.pyc
+bin/grawvs
+version.h
+*.conf
+
+

@@ -1,0 +1,60 @@
+{
+   <SDL_Init>
+   Memcheck:Leak
+   ...
+   fun:SDL_Init
+}
+
+{
+   <SDL_VideoInit>
+   Memcheck:Leak
+   ...
+   fun:SDL_VideoInit
+}
+
+#{
+#   <SDL_SetVideoMode>
+#   Memcheck:Leak
+#   ...
+#   fun:SDL_SetVideoMode
+#   ...
+#   fun:main
+#}
+
+{
+   <SDL_PollEvent>
+   Memcheck:Cond
+   ...
+   fun:SDL_PollEvent
+   ...
+   fun:main
+}
+
+{
+   <LibSDL>
+   Memcheck:Leak
+   ...
+   obj:/usr/lib/libSDL*
+}
+
+{
+   <LibGL>
+   Memcheck:Leak
+   ...
+   obj:/usr/lib/nvidia-current/libGL*
+}
+
+{
+   <glxChooseVisual>
+   Memcheck:Leak
+   ...
+   fun:glXChooseVisual
+}
+
+#{
+#   <ld>
+#   Memcheck:Leak
+#   ...
+#   obj:/lib/i386-linux-gnu/ld-2.13.so
+#}
+

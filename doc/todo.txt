@@ -1,0 +1,36 @@
+0001 | CLOSED | Algorithm will be documented.
+0002 | CLOSED | Revision number will be embedded into application.
+0003 | CLOSED | version file and python bytecode will be added to ignore list.
+0004 | CLOSED | Version information will be displayed when application is run.
+0005 | CLOSED | All methods will be pre-implemented with 'TODO' comment tag, which will be replaced with 'DONE' after completion.
+0006 | CLOSED | 'TODO' keyword in message body ('todo.txt') causes script to malfunction.
+0007 | CLOSED | Application crashes when run without a command line parameter. A default one must be defined.
+0008 | CLOSED | All method pre-implementations should compile without warning.
+0009 | CLOSED | Fix code to remove return value warning.
+0010 | CLOSED | Files and code will be rearranged according to provided Algorithm document.
+0011 | CLOSED | Build with highest warning level.
+0012 | OPEN | Simulation time display will be added.
+0013 | OPEN | Body count display will be added.
+0014 | OPEN | Wave count display will be added.
+0015 | OPEN | Relativistic Gravity Force calculation will be implemented.
+0016 | CLOSED | Body visualization should be implemented.
+0017 | CLOSED | Wave visualization should be implemented.
+0018 | CLOSED | Display viewport should be adjusted to show whole universe.
+0019 | CLOSED | Critical constants/coefficients should be read from a configuration file.
+0020 | CLOSED | BUG: Bodies do not emit waves regularly.
+0021 | CLOSED | BUG: A wave with much bigger than others, originating from (0,0) displayed.
+0022 | OPEN | Time frame, body/wave counts should be displayed on graphical window.
+0023 | OPEN | BUG: Some neighbor bodies seem do not affect each other.
+0024 | OPEN | Simulation Control PAUSE/RESUME feature should be implemented.
+0025 | OPEN | Viewport Control ZOOM-IN/ZOOM-OUT/PAN features should be implemented.
+0026 | OPEN | Simulation Control STEP feature should be implemented.
+0027 | OPEN | Simulation Control SAVE/LOAD feature should be implemented.
+0028 | CLOSED | Dead zone threshold distance for gravity force should be configurable.
+0029 | OPEN | A highlight option for any selected body and its covering waves should be implemented.
+0030 | OPEN | Auto pan/zoom option (pan: follow center of gravity, zoom: major mass distribution) should be implemented.
+0031 | OPEN | Date/Time information (open/close) would be useful in todo list.
+0032 | CLOSED | Todo list statistics should be added to completion report script.
+0033 | OPEN | Configurable font support should be added to display class.
+0034 | CLOSED | Custom keypress methods should be implemented.
+0035 | OPEN | Random seed should be configurable.
+0036 | OPEN | Mouse support for Zoom and Pan functions should be provided.
